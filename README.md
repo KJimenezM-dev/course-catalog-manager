@@ -1,68 +1,31 @@
-# ABCU Advising Assistance Program
+## Course Reflection
 
-A small C++ command-line application I built for **CS-300: Data Structures and Algorithms** at Southern New Hampshire University.
+### What was the problem you were solving in the projects for this course?
 
-The idea behind the project is simple: an academic advisor should be able to load a course catalog, see the available courses in order, and look up a course's prerequisites without searching through a CSV file manually.
+The main problem I was solving throughout this course was figuring out how to efficiently organize, store, search, and retrieve data using different data structures. The projects focused on building a course catalog system that could read course information from a CSV file, store the information, and allow users to search for and display course details, including prerequisites. The goal was to implement a working solution while also understanding how different data structures could affect the program's performance.
 
-## What the program does
+### How did you approach the problem? Consider why data structures are important to understand.
 
-- Reads course information from a CSV file and creates `Course` objects.
-- Stores the courses in a `vector` and sorts them by course number.
-- Displays the full catalog in alphanumeric order.
-- Searches for individual courses using binary search and displays their prerequisites.
-- Accepts course numbers in lowercase or uppercase.
-- Handles common input problems, such as a missing file or an invalid menu selection.
+I approached the problem by first breaking down the requirements and identifying what data the program needed to handle. From there, I considered how different data structures, such as vectors, hash tables, and binary search trees, could be used to store and retrieve that information.
 
-## Getting started
+One of the biggest things I took away from this course is that choosing a data structure is an important part of software design. Different structures offer advantages and disadvantages depending on the operations being performed. Understanding time complexity and how algorithms interact with data structures helped me see why planning a solution before writing code is important.
 
-You'll need a C++ compiler such as `g++`.
+### How did you overcome any roadblocks you encountered while going through the activities or project?
 
-Compile the program from the project directory:
+One of my biggest challenges was translating the concepts into working C++ code. I could generally understand what an algorithm was supposed to accomplish, but implementing it correctly required more effort. I encountered issues involving parsing data, managing program logic, and understanding how certain operations worked within a data structure.
 
-```bash
-g++ -std=c++17 ProjectTwo.cpp -o ProjectTwo
-```
+I worked through these challenges by debugging, testing smaller portions of my code, reviewing course materials, and breaking problems into manageable steps. I also used AI as a learning resource to help explain unfamiliar concepts and review my approach. Rather than focusing only on getting the program to run, I tried to understand why certain implementations worked and where mistakes were being made.
 
-Then run it:
+### How has your work on this project expanded your approach to designing software and developing programs?
 
-```bash
-./ProjectTwo
-```
+This course helped me develop a better appreciation for software design before implementation. Previously, I often approached programming by thinking about what code I needed to write first. Now, I find myself thinking more about the problem, the requirements, the structure of the data, and how different components of a program should interact.
 
-The program displays a menu:
+It also helped me recognize that programming involves more than learning syntax. The decisions made about how data is represented, validated, stored, and retrieved can have a major impact on how a system operates. This is something I plan to carry forward into future projects, especially as I continue exploring software engineering and larger systems.
 
-```text
-1. Load Data Structure.
-2. Print Course List.
-3. Print Course.
-9. Exit
-```
+### How has your work on this project evolved the way you write programs that are maintainable, readable, and adaptable?
 
-Choose **1** and enter the path to a course CSV file. Once it loads, choose **2** to view the course list or **3** to search for a course number such as `CSCI400`.
+Throughout the course, I became more intentional about how I organize my programs. I started paying closer attention to separating functionality into methods, choosing descriptive names, and keeping the program's logic understandable. Breaking larger problems into smaller pieces also made debugging and testing easier.
 
-### CSV format
+I have also started thinking more about how a program might change over time. Writing code that works is important, but being able to understand, modify, and expand that code later is equally important. This course helped reinforce the value of writing readable code and building programs with a clear structure rather than focusing only on completing the immediate task.
 
-Each row contains a course number, a title, and optionally one or more prerequisite course numbers:
-
-```csv
-CSCI100,Introduction to Computer Science
-CSCI101,Introduction to Programming in C++,CSCI100
-CSCI200,Data Structures,CSCI101
-```
-
-The course CSV is read at runtime, so you can enter its filename or full path when prompted. The university-provided course data may not be included in this repository.
-
-## How I approached it
-
-For Project One, I compared vectors, hash tables, and binary search trees. I chose a **sorted vector** for the final application because the program mainly loads a catalog once and then reads from it. Sorting the data makes it straightforward to display every course in order, while binary search gives an efficient way to find a specific course.
-
-Working on Project Two helped me connect those design choices to actual C++ code. I spent time learning how to parse input with `getline()` and `stringstream`, build objects from that data, pass vectors by reference, and debug issues that didn't show up as compiler errors.
-
-## AI acknowledgment
-
-I used ChatGPT as a learning and development resource while working on this project. It helped me discuss C++ concepts, think through the program's structure, review code, and troubleshoot errors. I worked through the implementation, tested the behavior, and made changes as I developed my understanding.
-
-## Author
-
-**Kamarky Jimenez**  
-CS-300 — Southern New Hampshire University
+Overall, CS-300 gave me a foundation in data structures and algorithms that I intend to continue developing through practical projects and further study.
